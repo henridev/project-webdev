@@ -1,0 +1,26 @@
+{
+
+	"create": {
+		"input-error": {
+			"username": {
+				"required": "Username is required"
+			}
+		},
+		"placeholder": "Enter friends username"
+	},
+	"button": {
+		"delete": "delete",
+		"invite": "invite",
+		"invite-friends": "invite friends",
+		"send-request": "send request"
+	},
+	"list": {
+		"drawer": "friend list",
+		"status": {
+			"play": "playing",
+			"online": "online",
+			"offline": "offline",
+			"inRoom": "in room"
+		}
+	}
+}

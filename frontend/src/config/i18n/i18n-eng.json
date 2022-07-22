@@ -1,0 +1,58 @@
+{
+	"shared": {
+		"landing": {
+			"question": "what do you",
+			"description": "Perfect for the meme-lovers in your life, What Do You Meme? is a game that's sure to keep you and your friends laughing.",
+			"button": "Get Started"
+		},
+		"table": {
+			"show": "show {{amount}}",
+			"tooltip": {
+				"first":"First Page",
+				"previous":"Previous Page",
+				"last":"Last Page",
+				"next":"Next Page"
+			},
+			"page": {
+				"pointer": "page <0>{{x}}</0> of <0>{{y}}</0>",
+				"goto": "Go to page:"
+			}
+		},
+		"navbar": {
+			"welcome": "welcome {{username}}!",
+			"links": {
+				"home":"Home",
+				"users": "Users",
+				"memes": "Memes",
+				"friends": "Friends",
+				"play": "Play"
+			}
+		},
+		"invite": {
+			"received": "{{user}} invited you to {{room}}"
+		}
+	},
+	"toast":{
+		"title":{
+			"error": "Error",
+			"success": "Success",
+			"info": "Info",
+			"warning": "Warning"
+		},
+		"message": {
+			"success": {
+				"create": "{{entity}} successfully created",
+				"update": "{{entity}} successfully updated",
+				"delete": "{{entity}} successfully deleted"
+			}
+		}
+	},
+	"error": {
+		"code": {
+			"unknown": "unknown error",
+			"ERR_DB_001": "Duplicate {{entity}}",
+			"ERR_OP_006": "{{entity}} does not exist",
+			"ERR_OP_004": "Invalid login"
+		}
+	}
+}

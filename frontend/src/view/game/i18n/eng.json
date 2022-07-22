@@ -1,0 +1,20 @@
+{
+	"creation-page": {
+		"title": "Set up a game room",
+		"input": "Enter new group name",
+		"banner": "set up a room, invite friends and let the memes begin!"
+	},
+	"game-page": {
+		"title": "Welcome this is room {{name}} 😁",
+		"chat": "chatroom {{name}}"
+	},
+	"button":{
+		"create-room": "create room",
+		"leave-room": "leave room",
+		"send-message": "send message",
+		"new-meme": "new meme"
+	},
+	"input": {
+		"message-placeholder": "type a message ..."
+	}
+}

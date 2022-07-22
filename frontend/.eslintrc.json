@@ -1,0 +1,79 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest/globals": true,
+		"cypress/globals": true
+
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:cypress/recommended",
+		"airbnb",
+		"plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2021,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"jest"
+	],
+	"ignorePatterns": ["serviceWorker.ts", "node_modules/**"],
+	"rules": {
+		"object-curly-newline": "off",
+		"linebreak-style": ["off", "unix"],
+		"no-use-before-define": "off",
+		"@typescript-eslint/no-use-before-define": ["error"],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/explicit-module-boundary-types": ["error", {
+			"allowArgumentsExplicitlyTypedAsAny": true
+		}],
+		"react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"indent": [
+			"error",
+			"tab"
+		],
+		"no-shadow": "off",
+		"no-tabs": 0,
+		"no-param-reassign":"off",
+		"max-len": ["warn", 120],
+		"import/prefer-default-export": 0,
+		"import/no-unresolved": [
+			"off",
+			{ "caseSensitive": false }
+		],
+		"import/extensions": [
+			"off",
+			"never"
+		],
+		"react/jsx-wrap-multilines": ["error", {
+			"declaration": "ignore",
+			"assignment": "ignore",
+			"return": "ignore",
+			"arrow": "ignore",
+			"condition": "ignore",
+			"logical": "ignore",
+			"prop": "ignore"
+		}],
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-closing-tag-location": "off"
+	},
+	"settings": {
+		"import/resolver": "webpack"
+	}
+}

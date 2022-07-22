@@ -1,0 +1,60 @@
+{
+	"login": {
+		"title": "Login",
+		"input": {
+			"email": "Email address",
+			"username": "User name",
+			"password": "Password"
+		},
+		"input-error": {
+			"username": {
+				"required": "Username is required",
+				"minLength": "Your username is to short",
+				"maxLength": "Your username is to long"
+			},
+			"password": {
+				"required": "Password is required",
+				"minLength": "Your password is to short",
+				"maxLength": "Your password is to long"
+			}
+		},
+		"button": {
+			"close": "Close",
+			"confirm": "Login"
+		},
+		"remember": "remember me"
+	},
+	"sign-up": {
+		"title": "Sign Up",
+		"input": {
+			"email": "Email address",
+			"username": "User name",
+			"password": "Password",
+			"cover": "Cover meme"
+		},
+		"input-error": {
+			"email": {
+				"required": "Email is required",
+				"pattern": "Give in a valid email address",
+				"minLength": "Your email is to short",
+				"maxLength": "Your email is to long"
+			},
+			"username": {
+				"required": "Username is required",
+				"minLength": "Your username is to short",
+				"maxLength": "Your username is to long"
+			},
+			"password": {
+				"required": "Password is required",
+				"minLength": "Your password is to short",
+				"maxLength": "Your password is to long"
+			}
+		},
+		"button": {
+			"close": "Close",
+			"confirm": "Sign Up",
+			"upload": "Upload"
+		},
+		"remember": "remember me"
+	}
+}

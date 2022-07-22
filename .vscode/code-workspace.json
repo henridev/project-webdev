@@ -1,0 +1,30 @@
+{
+    "folders": [
+    {
+      "path": "./frontend"
+    },
+    {
+      "path": "./backend"
+    }
+    ],
+    "settings": {
+        "editor.mouseWheelZoom": true,
+        "javascript.format.enable": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.fontFamily": "Fira Code Retina",
+        "editor.fontLigatures": true,
+        "editor.fontWeight": "500",
+        "files.watcherExclude": {
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true,
+            "**/node_modules/*/**": true,
+            "**/.hg/store/**": true
+        }
+    },
+    "editor.renderWhitespace": "all",
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "typesctipt": "typecriptreact"
+   }
+}

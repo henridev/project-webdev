@@ -1,0 +1,79 @@
+{
+	"page": {
+		"title": "admin user dashboard"
+	},
+	"create": {
+		"title": "Create a new user",
+		"input": {
+			"username": "Username",
+			"email": "Email",
+			"role": "Role",
+			"password": "Password"
+		},
+		"button": {
+			"confirm": "Confirm",
+			"close": "Cancel"
+		},
+		"input-error": {
+			"email": {
+				"required": "Email is required",
+				"pattern": "Give in a valid email address",
+				"minLength": "Your email is to short",
+				"maxLength": "Your email is to long"
+			},
+			"username": {
+				"required": "Username is required",
+				"minLength": "Your username is to short",
+				"maxLength": "Your username is to long"
+			},
+			"password": {
+				"required": "Password is required",
+				"minLength": "Your password is to short",
+				"maxLength": "Your password is to long"
+			}
+		}
+	},
+	"update": {
+		"title": "Update a user",
+		"input": {
+			"username": "Username",
+			"email": "Email",
+			"role": "Role"
+		},
+		"button": {
+			"confirm": "Confirm",
+			"close": "Cancel"
+		},
+		"input-error": {
+			"email": {
+				"required": "Email is required",
+				"pattern": "Give in a valid email address",
+				"minLength": "Your email is to short",
+				"maxLength": "Your email is to long"
+			},
+			"username": {
+				"required": "Username is required",
+				"minLength": "Your username is to short",
+				"maxLength": "Your username is to long"
+			}
+		}
+	},
+	"table": {
+		"header": {
+			"id": "ID",
+			"identification": "Identification",
+			"authorization": "Authorization",
+			"username": "Username",
+			"email": "Email",
+			"roleId": "Role ID",
+			"roleName": "Role Name",
+			"roleCode": "Role Code",
+			"actions": "Actions"
+		}
+	},
+	"button": {
+		"update": "update",
+		"delete": "delete",
+		"create": "create"
+	}
+}

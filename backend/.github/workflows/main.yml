@@ -1,0 +1,93 @@
+name: Node.js webservices api CI
+
+#  workflows get triggered on these events
+#  workflows can contain jobs which can be ran sequential or parallel
+#  jobs run in their own VM
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# jobs are a set of steps executing in same runner
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+      COOKIE_SECRET_1: ${{ secrets.COOKIE_SECRET_1 }}
+      COOKIE_SECRET_2: ${{ secrets.COOKIE_SECRET_2 }}
+      DATABASE_PORT: ${{ secrets.DATABASE_PORT }}
+      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+      DATABASE_SCHEMA: ${{ secrets.DATABASE_SCHEMA }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      DATABASE_HOSTNAME: ${{ secrets.DATABASE_HOSTNAME }}
+      DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+      DATABASE_LOGGING_ENABELD: ${{ secrets.DATABASE_LOGGING_ENABELD }}
+
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v2 # github binnenhalen + clonen
+
+    - name: Using Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{matrix.node-version}}
+        cache: 'npm'
+
+    # caching of node modules
+    - name: Cache node modules
+      uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key:  ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+    - name: Install test packages
+      working-directory: ./__tests__
+      run: npm ci
+
+    # Performs a clean installation of all dependencies in the `package.json` file
+    - name: Install dependencies
+      run: npm ci
+
+    - name: create build
+      run: npm run build --if-present
+
+    # strange bug module imports not allowed fix
+    - name: disable global setup
+      run: sed -i -E 's/^\t+globalSetup:/\/\/globalSetup:/g' jest.config.ts
+
+    - name: run tests failure
+      continue-on-error: true
+      run: npm run test:ci
+
+    - name: enable global setup
+      run: sed -i -E 's/^\/\/globalSetup:/globalSetup:/g' jest.config.ts
+
+    - name: run tests
+      run: npm run test:ci

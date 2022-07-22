@@ -1,0 +1,55 @@
+{
+	"page": {
+		"title": "meme dashboard"
+	},
+	"view": {
+		"button": {
+			"confirm": "Confirm",
+			"close": "Cancel"
+		}
+	},
+	"create": {
+		"title": "Create a new meme",
+		"input": {
+			"name": "Name",
+			"categories": "Categories",
+			"image": "Meme"
+		},
+		"button": {
+			"confirm": "Confirm",
+			"close": "Cancel",
+			"upload": "Upload"
+		},
+		"input-error": {
+			"categories": {
+				"required": "categories are required",
+				"minLength": "Your categories are to short",
+				"maxLength": "Your categories are to long"
+			},
+			"name": {
+				"required": "name is required",
+				"minLength": "Your name is to short",
+				"maxLength": "Your name is to long"
+			}
+		}
+	},
+	"table": {
+		"header": {
+			"id": "ID",
+			"name": "Name",
+			"categories": "Categories",
+			"updated_at": "Updated at",
+			"created_at": "Created at",
+			"creator_id": "Creator",
+			"actions": "Actions"
+		},
+		"value": {
+			"date": "{{ datum }} at {{ time }}"
+		}
+	},
+	"button": {
+		"view": "view",
+		"delete": "delete",
+		"create": "create"
+	}
+}

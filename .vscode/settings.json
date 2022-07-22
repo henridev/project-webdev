@@ -1,0 +1,54 @@
+{
+    "window.zoomLevel": 1,
+    "editor.letterSpacing": 0.5,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 5,
+    "editor.cursorBlinking": "solid",
+    "editor.snippetSuggestions": "top",
+    "editor.mouseWheelZoom": true,
+    "javascript.format.enable": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": false,
+        "**/.hg/store/**": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript", "reactjsx", "jsx", "typescript"],
+    "files.exclude": {
+        // "**/*.js": true,
+        // "**/*.scss": true,
+        "**/node_modules/": false,
+        "**/public": false,
+        "**/learn": true,
+        "**/dossier": false,
+
+    },
+    "editor.renderWhitespace": "all",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "eslint.workingDirectories": [
+        "./frontend",
+        "./backend",
+    ],
+    "eslint.nodeEnv": "14",
+    "editor.insertSpaces": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.tabSize": 4,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+}
